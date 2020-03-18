@@ -1,64 +1,116 @@
 const mapStyle = [
     {
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#eceff1'
-        }
-      ]
+        "featureType": "poi",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
     },
     {
-      elementType: 'labels',
-      stylers: [
-        {
-          visibility: 'off'
-        }
-      ]
+        "stylers": [
+            {
+                "saturation": -70
+            },
+            {
+                "lightness": 37
+            },
+            {
+                "gamma": 1.15
+            }
+        ]
     },
     {
-      featureType: 'administrative',
-      elementType: 'labels',
-      stylers: [
-        {
-          visibility: 'on'
-        }
-      ]
+        "elementType": "labels",
+        "stylers": [
+            {
+                "gamma": 0.26
+            },
+            {
+                "visibility": "off"
+            }
+        ]
     },
     {
-      featureType: 'road',
-      elementType: 'geometry',
-      stylers: [
-        {
-          color: '#cfd8dc'
-        }
-      ]
+        "featureType": "road",
+        "stylers": [
+            {
+                "lightness": 0
+            },
+            {
+                "saturation": 0
+            },
+            {
+                "hue": "#ffffff"
+            },
+            {
+                "gamma": 0
+            }
+        ]
     },
     {
-      featureType: 'road',
-      elementType: 'geometry.stroke',
-      stylers: [
-        {
-          visibility: 'off'
-        }
-      ]
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
     },
     {
-      featureType: 'road.local',
-      stylers: [
-        {
-          visibility: 'off'
-        }
-      ]
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            }
+        ]
     },
     {
-      featureType: 'water',
-      stylers: [
-        {
-          color: '#b0bec5'
-        }
-      ]
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 50
+            },
+            {
+                "saturation": 0
+            },
+            {
+                "hue": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": -50
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "lightness": 20
+            }
+        ]
     }
-  ];
+];
   
   function geocodeAddress(address, map, icon, title) {
     const geocoder = new google.maps.Geocoder();
